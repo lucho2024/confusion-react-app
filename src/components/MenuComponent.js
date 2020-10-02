@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
-import { CardTitle, Form } from 'reactstrap';
-import {Card,CardImg,CardImgOverlay,CardText,CardBody} from 'reactstrap';
+import {Card,CardImg,CardImgOverlay,CardText,CardBody,CardTitle} from 'reactstrap';
+import DishDetail from './DishdetailComponent'
 
 class  Menu extends Component{
     constructor(props){
@@ -42,14 +42,16 @@ class  Menu extends Component{
                 </div>
             );
         });
-
+       
         return(
             <div className="container">
+                
                 <div className="row">                  
                         {menu}                 
                 </div>
                 <div className="row">
-                    {this.renderDish(this.state.selectedDish)}
+                 
+                 <DishDetail selectedDish={this.state.selectedDish}/>
                 </div>
 
             </div>
